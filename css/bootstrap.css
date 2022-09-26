@@ -1,0 +1,293 @@
+* {
+    font-family: Verdana, Arial;
+    color: #111;
+    font-size: 12px;
+    --primary: #cccc99;
+    --secondary: #e8ecc8;
+    --vlight-bg-color : #f6f6ed;
+    --darker-color: #666633;
+    --mbr-color: #A47B92;
+    --non-mbr-color: #9690A6;
+    --menu-gray: #6c757d;
+    --reference:#dadada;  /* pour le toottip glossaire */
+}
+a b, a span{
+  color: inherit;
+}
+/* Pour changer globalement les couleurs : 
+- modifier les couleurs primary et secondary dans le fichier style.scss (essais/sass-workshop), le recompiler et le remplacer ici
+- faire les mêmes changements ici dans --primary et --secondary
+- modifier le logo
+*/
+/* .loader{
+	background: url('../img/ajax-loader1.gif') 50% 50% no-repeat rgba(255, 255, 255, 0.2);
+	cursor: wait;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 9999;
+} */
+.loader_container{
+	background: rgba(255, 255, 255, 0.2);
+	cursor: wait;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 9999;
+}
+.loader{
+  display: block;
+  position: relative;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border:4px solid transparent;
+  border-top-color:  #A47B92;
+  animation: spin 2s linear infinite;
+}
+.loader::before, .loader::after{
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border:4px solid transparent;
+}
+.loader::before{
+  top:5px;
+  left: 5px;
+  right:5px;
+  bottom: 5px;
+  border-top-color:  #d7aec5;
+  animation: spin 3s linear infinite;
+}
+.loader::after{
+  top:14px;
+  left: 14px;
+  right:14px;
+  bottom: 14px;
+  border-top-color:  #ffe1f8;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0%{
+    transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(120deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+main{
+  height:100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1300px 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+@media screen and (max-width: 1300px) {
+  .container-grille{
+      grid-template-columns: 1fr;
+  }
+}
+footer{
+  grid-column: span 3;
+}
+
+/* MENUS */
+.menubar>.row{
+    height : 50%;
+}
+.menubar ul{
+    background: var(--primary);
+    border: 0;
+}
+.menubar ul a:hover{
+    background: var(--secondary);
+}
+.menubar ul li a{
+    font-size: 11px;
+    font-weight: bold;
+    color : #555;
+}
+nav{
+  transition: 0.35s all ease;
+}
+/* .nav-item .dropdown-menu{
+  display: none;
+}
+.nav-item:hover .dropdown-menu{
+  display: block;
+} */
+.nav-item .dropdown-menu{ 
+  display:block; 
+  opacity: 0;  
+  visibility: hidden; 
+  transition:.3s;
+  margin-top:0;
+}
+.nav-item .dropdown-menu.fade-down{ top:80%; transform: rotateX(-75deg); transform-origin: 0% 0%; }
+.nav-item .dropdown-menu.fade-up{ top:180%;  }  /* pas utilisé */
+.nav-item:hover .dropdown-menu{ 
+  transition: .3s; 
+  opacity:1; 
+  visibility:visible; 
+  top:100%; 
+  transform: rotateX(0deg);
+}
+.member{
+  background: url(../img/logo_font_parme1.png) no-repeat; 
+  background-position: right; 
+  background-color: var(--mbr-color);
+  padding-right: 33px;
+}
+.not_member{
+  background-color: var(--non-mbr-color);
+}
+/* FORMULAIRES */
+textarea{
+  background-color: var(--primary);
+  width: 100%;
+}
+input, select{
+  background-color: var(--primary);
+}
+.form-vp>.row{
+  padding-top: 3px;
+}
+button{
+  font-size: 11px !important;
+}
+.btn-outline-menu{
+  color: var(--menu-gray);
+  border-color: var(--menu-gray);
+  border-width: 2px;
+}
+.btn-outline-menu:hover{
+  background-color: var(--menu-gray);
+  color: var(--vlight-bg-color);
+}
+.btn-inflate{
+  transition: 300ms;
+}
+.btn-inflate:hover{
+  transform: scale(1.3);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+/* CONTENT */
+#content>.row{
+  border-bottom: 1px solid var(--secondary);
+}
+#content .row:last-child{
+  border-bottom: none;
+}
+#content>.col{
+  border-bottom: 1px solid var(--secondary);
+}
+#info{
+  border-right: 1px solid var(--secondary);
+}
+.small>a{
+  font-size: inherit;
+}
+.series{
+  border-bottom: 1px solid var(--secondary);
+}
+.rectangle_light { /* sommaires */
+	border: 2px solid var(--secondary);
+	padding: 2px 3px 0 3px;
+	margin: 4px 0 3px 0;
+}
+#information{
+  color: #055160;
+  background-color: #cff4fc;
+  border-color: #b6effb;
+}
+.card_article{    /* inutilisé */
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-height: 3rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+/* TABLEAUX */
+.tableau_col_alt td {  /* colonnes espacées  */
+  padding-right: 15px;
+  padding-left: 0px;
+  vertical-align: top;
+}
+
+tableau_col_alt tr:nth-child(2n) {  /* table avec chgt de couleur une ligne sur deux */
+  background-color: #d6d6a0;
+}
+
+.tableau_bord th, td{
+  border: 1px solid black;
+}
+/* MODALS */
+.modal_bg{
+  background: rgba(1, 1, 1, 0.2);
+}
+.modal-body>.row{
+  margin-top: 3px;    /* comme .form-vp>.row */
+}
+
+/* tooltips */
+.info{
+	display: inline-block;
+	position: relative;
+	text-decoration: underline dotted;
+}
+.info span{		/*utilisé en connection avec le jquery + ajax ref_query.php */
+  display: none;
+  background-color: var(--reference);
+  text-align: left;
+  font-style: normal;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+ top: 20px;
+  z-index: 1;
+  /*bottom: 15px;	décallage vers le haut*/
+  /*left: 0px;*/		/*alignement des bords gauche		:  FIXÉ dans accueil par jquery ; dans affichage_actes, se cale sur la gauche du div parent*/
+  /*margin-left: -60px;*/
+	width:450px;
+}
+.info:hover span
+{
+  display:block;
+  width: 450px;
+  cursor:  pointer;
+  z-index:1000;
+}
+
+.over{
+	font-size: inherit;
+}
+.over:hover{
+	cursor: help;
+}
+.over div{
+  display: none;
+  text-align: left;
+    border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+}
+.over:hover div{
+  display:block;
+  z-index:10;
+  background-color:var(--vlight-bg-color);
+  /* width: 200px; */
+  bottom: 25px;
+  transition: all 4s linear;
+}

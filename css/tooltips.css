@@ -1,0 +1,66 @@
+/*Tooltip*/
+
+/*section#tooltip > div > div > p:nth-child(odd)::first-letter {		
+  font-weight: normal;
+  float: left;
+  font-size: 4em;
+  line-height: .75;
+  letter-spacing: .15em;
+  margin-top: .2em;
+}*/
+
+/*Tooltip text*/
+.tool {
+  position: relative;
+  color: #00b4ab;
+  font-weight: bold;
+}
+
+.tool .tool-text {
+  visibility: hidden;
+  background-color: #00b4ab;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 25px;
+  left: -80px;
+  margin-left: -60px;
+  opacity: 0;
+  transition: .3s;
+  transform: translate3d(0px, 20px, 0px);
+}
+
+/*.tool .tool-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #00b4ab transparent transparent transparent;
+}*/
+
+.tool:hover .tool-text {
+  visibility: visible;
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+}
+
+.circle{
+	display: inline-block;
+    margin:5px;
+    width:25px;
+    background-color: #00b4ab;
+    height:25px;
+    text-align:center;
+    border-radius:25px;
+    /*line-height: 30px;*/
+    /*font-family: Georgia, serif;*/
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+}

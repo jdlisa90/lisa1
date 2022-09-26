@@ -1,0 +1,23 @@
+/*inutilisés*/
+.left-arrow{
+	display:block;
+	top: 40px;
+	position: relative;
+	/*margin-right:6px;*/
+	float:left;
+	z-index: 100;
+}
+
+.right-arrow{
+	display:block;
+	top: 40px;
+	left: -47px;
+	position: relative;
+	margin-left:0px;
+	float:left;	
+}
+
+/* ne semblent pas utilisés */
+#nav a:focus { outline: none; }
+
+#nav img { border: none; display: block }

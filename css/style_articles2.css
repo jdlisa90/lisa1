@@ -1,0 +1,113 @@
+/*------- styles articles -------*/
+
+* {
+  --medium-bg-color: #efecca;
+}
+
+.article_content, .article_content p, .article_content li, .article_content em, .article_content b, .article_content strong, .article_content td{
+	font-size: 12px;
+}
+.article_content h2,.titre3, .titre4, .titre5, .titre6{
+	margin-bottom: 0px;
+	margin-top: 0px;
+	font-size: 2em;
+	font-weight: 300;
+}
+.article_content h2,.titre1, .titre2, .titre3, .titre4, .titre5, .titre6, .titre_article{
+	margin-bottom: 0px;
+	margin-top: 10px;
+	font-family: 'Kreon', 'Regular';
+	font-weight: 300;
+}
+.article_content .extrait{
+	font-size: 11px;
+	margin-left:20px;
+	margin-top: 0.2em;
+	font-style: italic;
+}
+.article_content ul{
+	margin-top: 0.5px;
+	margin-left: 0px;  
+	padding-left: 10px;
+}
+.article_content li{
+	padding-bottom: 2px;
+	padding-top: 2px;
+}
+
+p {
+	margin-bottom: 0.5px;
+}
+.titre_article{
+	font-size: 3.5em;
+}
+.titre1{
+	font-size: 3em;
+}
+.titre2{
+	font-size: 2.4em;
+}
+.titre3, .titre4, .titre5, .titre6{
+	font-size: 2em;
+}
+.titre_article strong{
+	font-weight: bold;
+}
+.titre_article em{
+	font-style: italic;
+}
+.titre1, .titre2, .titre3, .titre4, .titre5, .titre6{
+	margin-bottom: 6px;
+}
+
+/* l'incrémentation des paragraphes était un élément calculé dans le php */
+.traduction{
+	font-size: 11px;
+	margin-left:20px;
+}
+
+/* SOMMAIRE*/
+.sommaire_bloc{
+	background-color: var(--light-bg-color);
+	display: table;
+	padding: 7px;
+}
+.sommaire_bloc *{
+	background-color: var(--light-bg-color);
+}
+.sommaire{
+	padding-left: 0px;
+	margin-bottom: 0px;
+}
+.sommaire li{
+	list-style-type: none;
+	padding-bottom: 2px;
+	padding-top: 2px;
+}
+
+.multicol2 td{
+	margin-left: 0;
+  padding:10px 10px;
+  width:50%;
+  background:var(--medium-bg-color);
+}
+.multicol2 td+ td{
+  border-left:8px solid var(--dark-bg-color);
+  background:var(--medium-bg-color);
+}
+
+.reference{
+	font-size: inherit;
+}
+.reference:target { /* coloration des notes, en bas des article*/
+	background-color: #aaaaaa;
+}
+
+.tableau_grille_fine{							/* dans 2 articles anciens*/
+ 	border-collapse:collapse;
+}
+.tableau_grille_fine td{
+	border:1px solid black;
+	min-width: 40px;
+	padding: 1px 3px 1px 3px;
+}

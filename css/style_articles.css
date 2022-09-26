@@ -1,0 +1,87 @@
+/*------- styles articles -------*/
+
+* {
+  --medium-bg-color: #efecca;
+}
+
+.article_content, .article_content p, .article_content li, .article_content em, .article_content b, .article_content strong, .article_content td{
+	font-size: 12px;
+}
+.article_content h2,.titre3, .titre4, .titre5, .titre6{
+	margin-bottom: 0px;
+	margin-top: 0px;
+	font-size: 2em;
+	font-weight: 300;
+}
+
+.article_content h2,.titre1, .titre2, .titre3, .titre4, .titre5, .titre6, .titre_article{
+	margin-bottom: 0px;
+	margin-top: 10px;
+	font-family: 'Kreon', 'Regular';
+	font-weight: 300;
+}
+
+p {
+	margin-bottom: 0.5px;
+}
+.titre_article{
+	font-size: 3.5em;
+}
+.titre1{
+	font-size: 3em;
+}
+.titre2{
+	font-size: 2.4em;
+}
+
+.article_content .extrait{
+	font-size: 11px;
+	margin-left:20px;
+	margin-top: 0.2em;
+	font-style: italic;
+}
+.traduction{
+	font-size: 11px;
+	margin-left:20px;
+}
+.article_content ul{
+	margin-top: 0.5px;
+	margin-left: 0px;  
+	padding-left: 10px;
+}
+.article_content li{
+	padding-bottom: 2px;
+	padding-top: 2px;
+}
+/* image pour chaque article ; plus utilisé pour la page principale */
+.article_content img{
+  margin-top: 5px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  max-width: 600px;
+}
+
+/* l'incrémentation des paragraphes est un élément calculé dans le php
+
+/* SOMMAIRE*/
+.sommaire{
+	padding-left: 0px;
+	margin-bottom: 0px;
+}
+.sommaire li{
+	list-style-type: none;
+	padding-bottom: 2px;
+	padding-top: 2px;
+}
+
+.multicol2 td{
+	margin-left: 0;
+  padding:10px 10px;
+  width:50%;
+  background:var(--medium-bg-color);
+}
+.multicol2 td+ td{
+  border-left:8px solid var(--dark-bg-color);
+  background:var(--medium-bg-color);
+}

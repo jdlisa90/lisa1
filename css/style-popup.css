@@ -1,0 +1,147 @@
+.overlay{
+    display: none;
+    position: fixed;
+    top:0; right:0; bottom:0; left:0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+.overlay:target{
+    display: block;
+}
+
+#overlay1{
+    display: none;
+    position: fixed;
+    top:0; right:0; bottom:0; left:0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+#overlay1:target{
+    display: block;
+}
+
+#overlay2{
+    display: none;
+    position: fixed;
+    top:0; right:0; bottom:0; left:0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+#overlay2:target{
+    display: block;
+}
+
+#overlay3{
+    display: none;
+    position: fixed;
+    top:0; right:0; bottom:0; left:0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+#overlay3:target{
+    display: block;
+}
+
+#overlay4{
+    display: none;
+    position: fixed;
+    top:0; right:0; bottom:0; left:0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+#overlay4:target{
+    display: block;
+}
+
+#overlay5{
+    display: none;
+    position: fixed;
+    top:0; right:0; bottom:0; left:0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+#overlay5:target{
+    display: block;
+}
+/*overlay du pavé de connexion*/
+#overlay6{
+    display: none;
+    position: fixed;
+    top:0; right:0; bottom:0; left:0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+#overlay6:target{
+    display: block;
+}
+.popup_connexion{
+    background: #e8ecc8;
+    padding: 5px;
+    border: 5px solid #cccc99;
+    position: relative;
+  	margin-top: 50px; 
+    margin-right: 50px;
+    margin-left: auto;
+    max-width: 300px;
+    box-shadow: 0px 0px 20px #000;
+    border-radius: 10px;
+}
+
+#overlay_rapport{
+    display: none;
+    position: fixed;
+    top:0; right:0; bottom:0; left:0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+#overlay_rapport:target{
+    display: block;
+}
+
+#overlay_contact{
+    display: none;
+    position: fixed;
+    top:0; right:0; bottom:0; left:0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+#overlay_contact:target{
+    display: block;
+}
+#overlay_rapport, #overlay_prop, #overlay_comment, #overlay_url{
+    display: none;
+    position: fixed;
+    top:0; right:0; bottom:0; left:0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+#overlay_rapport:target, #overlay_prop:target, #overlay_comment:target, #overlay_url:target{
+    display: block;
+}
+
+.popup_block{
+    background: #e8ecc8;
+    padding: 5px;
+    border: 5px solid #cccc99;
+    position: relative;
+  margin-top: 50vh; /* poussé de la moitié de hauteur de viewport */
+  transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    box-shadow: 0px 0px 20px #000;
+    border-radius: 10px;
+}
+
+.bandeau{
+  	display: block;
+  	padding-top: 5px;
+}
+.bandeau span{
+	font-size: 18px;
+}
+
+img.btn_close {
+    float: right;
+    margin: 0 0 0 0;
+}

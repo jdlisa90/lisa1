@@ -1,0 +1,264 @@
+/* Principal */
+
+.menu{
+        width:90%;
+margin-left:auto; 
+margin-right:auto;
+        margin: 0;
+        padding: 0 0 0 0;
+        list-style: none;
+        background: var(--dark-bg-color);	/* */
+}
+
+.menu li{
+        float: left;
+        padding: 5px 0 10px 0;
+        position: relative;
+}
+
+.menu a{		/* niveau 1 */
+        float: left;
+        height: 15px;			/* */
+        padding: 0 25px;		/* */
+        color: #444;
+  font-family: Verdana, Arial;
+  font-size: 11px;
+  font-weight: bold;
+        text-decoration: none;
+}
+
+.menu li:hover > a{
+        color: #111;
+}
+
+*html .menu li a:hover{ /* IE6 */
+        color: #111;
+}
+
+.menu li:hover > ul{
+        display: block;
+}
+
+/* Sous-menu */
+
+.menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    z-index: 99999;
+    background: var(--dark-bg-color);
+}
+
+.menu ul li{
+    float: none;
+    padding: 0;
+    display: block;
+    border-bottom: 2px solid #555;								/* */
+    margin: 0 5px;													/* */
+    /*box-shadow: 0 1px 0 #111111, 0 1px 0 #777777;*/
+}
+/*
+.menu ul li:last-child{
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+*/
+.menu ul a{
+    padding: 10px 15px 10px 20px;								/* */
+    height: auto;
+    line-height: 1;
+    display: block;
+    white-space: nowrap;
+    float: none;
+    text-transform: none;
+}
+
+*html .menu ul a{ /* IE6 */
+        height: 10px;
+        width: 150px;
+}
+
+*:first-child+html .menu ul a{ /* IE7 */
+        height: 10px;
+        width: 150px;
+}
+
+.menu ul a:hover{
+        background: var(--light-bg-color);
+}
+
+.menu ul li:last-child {									/* */
+	margin-bottom: 5px;
+}
+
+/* Rétablissement du flottement */
+.menu:after{
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+}
+
+.menu ul li ul{	/*second niveau */
+  margin:0 0 0 100px;
+}
+
+.menu ul li ul li{	
+  margin:0 0 0 0;
+}
+
+.menu ul li ul a{	/* top, right, bottom, left */
+    padding: 5px 15px 5px 20px;
+}
+
+.menu ul li ul li:last-child {
+	margin-bottom: 0px;
+}
+
+* html .menu             { zoom: 1; } /* IE6 */
+*:first-child+html .menu { zoom: 1; } /* IE7 */
+
+#menu{
+        width:90%;
+margin-left:auto; 
+margin-right:auto;
+        margin: 0;
+        padding: 0 0 0 0;
+        list-style: none;
+        background: var(--dark-bg-color);	/* */
+}
+
+#menu li{
+        float: left;
+        padding: 5px 0 10px 0;
+        position: relative;
+}
+
+#menu a{		/* niveau 1 */
+        float: left;
+        height: 15px;			/* */
+        padding: 0 25px;		/* */
+        color: #444;
+  font-family: Verdana, Arial;
+  font-size: 11px;
+  font-weight: bold;
+        text-decoration: none;
+}
+
+#menu li:hover > a{
+        color: #111;
+}
+
+*html #menu li a:hover{ /* IE6 */
+        color: #111;
+}
+
+#menu li:hover > ul{
+        display: block;
+}
+
+/* Sous-menu */
+
+#menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    z-index: 99999;
+    background: var(--dark-bg-color);
+}
+
+#menu ul li{
+    float: none;
+    padding: 0;
+    display: block;
+    border-bottom: 2px solid #555;								/* */
+    margin: 0 5px;													/* */
+    /*box-shadow: 0 1px 0 #111111, 0 1px 0 #777777;*/
+}
+/*
+#menu ul li:last-child{
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+*/
+#menu ul a{
+    padding: 10px 15px 10px 20px;								/* */
+    height: auto;
+    line-height: 1;
+    display: block;
+    white-space: nowrap;
+    float: none;
+    text-transform: none;
+}
+
+*html #menu ul a{ /* IE6 */
+        height: 10px;
+        width: 150px;
+}
+
+*:first-child+html #menu ul a{ /* IE7 */
+        height: 10px;
+        width: 150px;
+}
+
+#menu ul a:hover{
+        background: var(--light-bg-color);
+}
+
+#menu ul li:last-child {									/* */
+	margin-bottom: 5px;
+}
+
+/* Rétablissement du flottement */
+#menu:after{
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+}
+
+#menu ul li ul{	/*second niveau */
+  margin:0 0 0 100px;
+}
+
+#menu ul li ul li{	
+  margin:0 0 0 0;
+}
+
+#menu ul li ul a{	/* top, right, bottom, left */
+    padding: 5px 15px 5px 20px;
+}
+
+#menu ul li ul li:last-child {
+	margin-bottom: 0px;
+}
+/* ------------- */
+/* menu connexion */
+/* ------------- */
+#menu_not_member{
+	float: right;
+	background-color: var(--non-mbr-color);
+}
+#menu_member{
+	float: right;
+	background: url(../img/logo_font_parme1.png) no-repeat;
+	background-position: right;
+	background-color: var(--mbr-color);
+}
+
+* html #menu             { zoom: 1; } /* IE6 */
+*:first-child+html #menu { zoom: 1; } /* IE7 */

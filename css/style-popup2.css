@@ -1,0 +1,43 @@
+.overlay{
+    display: none;
+    position: fixed;
+    top:0; right:0; bottom:0; left:0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+.overlay:target{
+    display: block;
+}
+.popup{
+    background: #e8ecc8;
+    padding: 5px;
+    border: 5px solid #cccc99;
+    position: relative;
+    margin-left: auto;
+    box-shadow: 0px 0px 20px #000;
+    border-radius: 10px;
+}
+.popup_connexion{
+  	 margin-top: 50px;
+    margin-right: 50px;
+    max-width: 300px;
+}
+.popup_block{
+  margin-top: 50vh; /* poussé de la moitié de hauteur de viewport */
+  transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
+    margin-right: auto;
+    max-width: 1000px;
+}
+.bandeau{
+  	display: block;
+  	padding-top: 5px;
+    padding-bottom: 5px;
+    background-color:#999;
+    color:white;
+    font-size: 18px;
+    line-height: 17px;
+}
+img.btn_close {
+    float: right;
+    margin: 0 0 0 0;
+}

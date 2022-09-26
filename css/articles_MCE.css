@@ -1,0 +1,691 @@
+/* ----------------------------- */
+/* 		= Color codes 				*/
+/* ----------------------------- */
+/*
+Black (text):				#000
+Light background			#F2F2CE
+Dark background			#cccc99
+Gray (links)				#0066a1	inutilisé
+*/
+
+/* ----------------------------- */
+/* 		= Base styles				*/
+/* ----------------------------- */
+
+* {  
+  color: black;  -epub-text-transform: none;
+  font-family: Verdana, Arial;
+  font-size: 12px;
+  --vlight-bg-color : #f6f6ed;
+  --light-bg-color: #e8ecc8;
+  --dark-bg-color: #cccc99;
+  --mbr-color: #A47B92;
+  --non-mbr-color: #9690A6;
+}
+/* spécifiques */
+
+ul{
+	margin-left: 0px;  
+	padding-left: 10px;
+}
+li{
+	padding-bottom: 2px;
+	padding-top: 2px;
+}
+
+.light{
+	background-color: var(--light-bg-color);
+	font-family: inherit;
+	font-style: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+.dark{
+	background-color: var(--dark-bg-color);
+}
+
+.gray{
+	background-color: #bbb;
+}
+
+html, body, form, h2, h5 {
+	margin: 0; padding: 0;
+}
+
+html, body {
+  background-color: var(--dark-bg-color);
+  background-position: 0% 0%;  
+  border-color: var(--dark-bg-color); 
+  height: 100%;
+  width: 100%;
+}
+
+p {  
+  text-align: justify;
+}
+
+a, .a_no_dec {  
+  text-decoration: none;  
+  color: #666666;
+  font-size: inherit;  
+  font-weight: inherit;
+}
+
+a:hover {  
+  text-decoration: underline;
+}
+
+.a_no_dec:hover {
+    text-decoration: none;
+}
+
+h5, h5 a, h5 a em {
+  font-size: 12.5px;  
+  font-weight: normal;
+}
+
+h5 a em, h2 em, h2 i, h5 i {
+  font-size: inherit;  
+  font-weight: inherit;
+  color: inherit;
+}
+
+h5 b, h5 strong, h5 strong a {
+  font-size: 12.5px;  
+  font-weight: bold;
+}
+
+strong {
+	font-size: inherit;
+	color: inherit;
+}
+
+.article_content h5{	/* pour les articles html impossibles à modifier*/
+	margin:8px 0 8px 0;
+}
+
+h2 a, h5 a, b a, a b {  
+  color: #444444;
+}
+
+i {  
+  font-style: italic;
+}
+
+img{
+    border-width: 1px; 
+}
+
+/* ----------------------------- */
+/* 		= Blocs						*/
+/* ----------------------------- */
+
+#contenu {  /* grosse division juste après body ; maintient #bas-page en bas d'un affichage "standard" */
+  margin: 1em;  
+  height: 100%;
+  min-width: 1190px;
+}
+
+#gauche {  
+  float: left;
+  width: 27em;  
+  padding-right: 1em;  
+/*  border-right:1px dotted #e8ecc8;*/
+  padding-left:0px;
+}
+
+#main {  /* partie principale, à droite de #gauche */
+  overflow: auto;  
+  min-height: 82%;
+  padding-left: 1em;  
+  margin-bottom: 11px;
+}
+
+#bas_page {  
+  margin-left: auto;  
+  margin-right: auto;  
+  width: 90%;  
+  clear: both;  
+  margin-top: 1em;  
+  padding-bottom: 1em;
+  border-top: 1px dotted var(--light-bg-color);  
+}
+
+.original{
+	font-style: italic;
+}
+
+.centrer {
+  margin-left: auto;  
+  margin-right: auto;
+}
+
+.center {  /* pour certains affichages (plutôt étroits), à l'intérieur de #main */ 
+  margin-left: auto;  
+  margin-right: auto;  
+  text-align: left;  
+  width: 85%;
+  min-width:820px;
+}
+
+.article {  /* affichage de chaque article, sur la page articles récents */
+  overflow: auto;
+  margin-left: 1em;  
+  margin-right: 1em;  
+  padding-bottom: 10px;
+}
+
+.citation{
+	margin : 3px 0 3px 0;
+	padding: 3px;
+	padding-left: 3em; 
+	border-style: solid; 
+	border-width: 1px;
+	border-color: #aaa;
+	font-family: Helvetica;
+font-size: 11px;
+}
+
+.tiret, .article {
+	border-bottom: 1px dotted var(--light-bg-color);
+	margin-bottom: 5px;
+}
+
+.droite {  /* pour logo LISA + formulaire connexion */
+  float: right;  
+  margin: 2em;  
+  margin-right: 1em;
+  padding: 1em;
+  background-color: inherit;  
+}
+
+.img_droite {   /* illustrations d'articles */
+  float: right;  
+  max-width: 60%;  
+  margin-top: 7px;  
+  margin-right: 0px;  
+  margin-bottom: 7px;  
+  margin-left: 7px;  
+  text-align: center;  
+  font-style: italic;
+}
+
+.img_gauche {  /* illustrations d'articles */
+  float: left;  
+  max-width: 60%;  
+  margin-top: 0px;  
+  margin-right: 7px;  
+  margin-bottom: 7px;  
+  margin-left: 0px;  
+  text-align: center;  
+  font-style: italic;
+}
+
+.cellule_texte {	/* colonne texte de présentation de chaque article */
+	display: table-cell;
+    vertical-align: middle;
+    border: 0px;
+	width:380px;
+	vertical-align:top;
+}
+
+.article img{  /* image pour chaque article */
+  margin-top: 5px;  
+  margin-right: 0px;  
+  margin-bottom: 0px;  
+  margin-left: 0px;  
+  max-width: 600px;
+}
+
+.cssinput {  
+  background-color: var(--dark-bg-color);  
+/*  background-image: none;  
+  background-repeat: repeat;  
+  background-attachment: scroll;  
+  background-position: 0% 0%;  
+  font-size: 10px;  
+  border-width: 1px;  
+  border-style: inset; 
+  vertical-align: bottom;
+  position: relative;*/
+  overflow: hidden;
+}
+
+.cssinput_red {  
+	border: 1px solid red;
+  background-color: var(--dark-bg-color);
+  overflow: hidden;
+}
+
+.cssinput_bold :first-child{
+	font-weight: bold;
+}
+
+.marge_gauche{
+	margin-left: 1.25cm;
+}
+
+.legend_small, .legend_small a {
+	display: inline-block;
+	font-size: 8px;
+}
+
+/* effet cacher-dérouler, utilisé dans la page "archive" */
+.less:active .button-read-more, .button-read-less  {display: none}
+.less:active .button-read-less {display: block}
+.more {margin-left: 20px;margin-top: 0px}
+
+.tooltip	/* infobulle */
+{
+  text-decoration:dashed underline;
+  position:relative;
+}
+.tooltip span
+{
+  display:none;
+  border-radius:6px;
+  color:black;
+  background:white; 
+}
+.tooltip span img
+{
+  float:left;
+  margin:2px 2px 2px 2px;
+}
+.tooltip:hover span
+{
+  display:block;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:1000;
+  width:auto;
+  max-width:920px;
+  min-width:200px;
+  border:1px solid black;
+  margin-top:12px;
+  margin-left:32px;
+  overflow:hidden;
+  padding:2px;
+  font-weight: normal;
+  text-decoration:none;
+}
+
+#menu-deroulant, #menu-deroulant ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+#menu-deroulant li {
+/* on place les liens du menu horizontalement */
+    display: inline-block;
+}
+#menu-deroulant ul li {
+/* on enlève ce comportement pour les liens du sous menu */
+    display: inherit;
+}
+#menu-deroulant a {
+    text-decoration: none;
+    display: block;
+    width:10em;
+    padding: 8px;
+	background-color:#777777;
+	font-size: 12.5px;
+	font-weight: bold;
+	color:var(--light-bg-color);
+}
+
+#menu-deroulant a:hover {
+    background:#555555;
+}
+
+#menu-deroulant ul {
+    position: absolute;
+/* on cache les sous menus complètement sur la gauche */
+    left: -999em;
+    z-index: 1000;
+}
+#menu-deroulant li:hover ul {
+/* Au survol des li du menu on replace les sous menus */
+    left: auto;
+}
+
+/* ------ tableaux CSS ----------*/
+
+div.colonnes {
+    display: table;
+    border-collapse: separate;
+}
+
+.row {
+    display: table-row;
+    border: 0px;
+    height: 25px;
+}
+
+.cellule {
+    display: table-cell;
+    vertical-align: middle;
+    border: 0px;
+}
+
+#travaux_indexes .cellule{	/* affichage spécifique (à revoir) */
+	width: 35em;
+}
+
+#liste_sources .row{	/* affichage plus serré, compatible avec le reste de la page */
+	height: auto;
+}
+
+
+/* --- listes en forme de tableaux, nb. de colonnes fonction de la largeur de la fenêtre ---*/
+
+.case15 {	
+    margin: 0px;
+    padding: 0px;
+    float: left;
+}
+.case15{	/*mise en forme formulaire de saisie de travaux (présentation à revoir) */
+    width: 15em;
+}
+
+.inblock12,.inblock23,.inblock30 {
+	display: inline-block;
+	vertical-align: top;
+}
+.inblock12{		/* multicolonnage dans liste patronymes... */
+	width: 12em;
+}
+.inblock23{		/* multicolonnage dans liste noms, liste sources... */
+	width: 23em;
+}
+.inblock30{		/* multicolonnage dans liste noms, liste sources... */
+	width: 30em;
+}
+
+/* --- blocs couleurs -----*/
+
+.crit{	/* dans #gauche */
+	margin:6px 0 6px 0;
+	padding:3px 0 5px 0;
+	background-color: var(--light-bg-color);
+}
+.crit_l{
+	padding-left: 10px;
+}
+
+.rectangle_light{
+	display: table;
+	background: var(--light-bg-color);
+}
+
+.rectangle_darkened{
+	display: table;
+	background: var(--dark-bg-color);
+}
+
+/* -------mise en forme textes ----------*/
+
+.img_legende, .crit_elts {  /* dans plusieurs articles (maladroit) */
+  font-style: italic;
+}
+
+.crit_elts{
+	color : #888;
+}
+
+.reference:target { /* coloration des notes, en bas des articles */
+	background-color: #aaaaaa;
+}
+
+span.big{	/* page sélectionnée dans une liste */
+    font-size: large;
+}
+span.big a{
+    font-size: inherit;
+}
+
+span.gros{	/* pour "Histoire de la région de Belfort ; autres usages possibles  */
+    font-size: 120%;
+    font-weight: bold;
+}
+span.gros a{
+    font-size: inherit;
+}
+
+.tiny_vspace {
+	margin-bottom: 5px;
+}
+
+/*------- styles articles -------*/
+.titre_article{
+	font-size: 25px;
+}
+.titre_article strong{
+	font-weight: bold;
+	font-size: 25px;
+}
+.titre_article em{
+	font-style: italic;
+	font-size: 25px;
+}
+.titre1{
+	font-size: 1.9em;
+}
+.titre2{
+	font-size: 1.4em;
+}
+.titre3{
+	font-size: 1.2em;
+}
+.titre4{
+	font-size: 1.2em;
+}
+.titre5{
+	font-size: 1.2em;
+}
+.titre6{
+	font-size: 1.2em;
+}
+.titre1, .titre2, .titre3, .titre4, .titre5, .titre6{
+	margin-bottom: 6px;
+} 
+
+h2, h2 a, h2 i{
+	margin-bottom: 0px;
+	margin-top: 10px;
+  font-size: 2em;
+	font-family: 'Kreon', 'Regular';
+	font-weight: 300;
+}
+
+p {
+	margin-bottom: 0.5px;
+}
+
+/* ------ identifiants mineurs ----------*/
+
+#initiale{  
+  margin-top: 1px;  
+  margin-right: 1px;  
+  margin-bottom: 1px;  
+  margin-left: 1px;  
+  float: left;  
+  width: 3em;  
+  text-align: center;
+}
+
+#information {
+}
+
+#recherche_article { /* petit bloc en tête d'articles récents */
+	margin:13px 0 13px 0;
+	margin-left: 11px;
+	/*text-align:center;*/
+}
+
+/* ----------------------------- */
+/* 		= Lists						*/
+/* ----------------------------- */
+
+ul.noindent, ul.nobug {  /* très petites indentations */
+  margin-top: 2px;  
+  margin-right: 0px;  
+  margin-bottom: 0px;  
+  margin-left: 5px;  
+  padding-left: 10px;
+}
+ul.nobug li {			/* plus sans puce */
+	list-style: none;
+}
+
+#themes_aticles > ul{
+	margin-bottom:10px;
+	padding-left: 20px;
+}
+
+#themes_aticles > ul > li > ul{
+	list-style-type:none;
+	padding-left: 12px;
+}
+
+.rectangle_light ul{		/* utilisé pour la page mel_gnn */
+	padding-bottom:6;
+	padding-top:3;
+	margin-left:0px;
+	padding-left:20px;
+}
+
+.rectangle_light ul > li{
+	margin-bottom: 3px;
+}
+
+/* ----------------------------- */
+/* 		= tables						*/
+/* ----------------------------- */
+
+.tableau_col_alt{
+	border-collapse:collapse;
+}
+.tableau td, .tableau_col_alt td {  /* colonnes espacées  */
+  padding-right: 15px;  
+  padding-left: 0px;  
+  vertical-align: top;
+}
+
+table.tableau_col_alt tr:nth-child(2n) {  /* table avec chgt de couleur une ligne sur deux */
+  background-color: #d6d6a0;  
+  background-image: none;  
+  background-repeat: repeat;  
+  background-attachment: scroll;  
+  background-position: 0% 0%;
+}
+
+.tableau_lexique {
+	width: 100%;
+	border-collapse: collapse;
+}
+.tableau_lexique td{
+	border-width:1px;
+	border-style:solid; 
+	border-color:#aaa;
+	padding: 4px;
+}
+
+.tableau_grille_fine{
+ 	border-collapse:collapse;
+}
+
+.tableau_grille_fine td{
+	border:1px solid black;
+	min-width: 40px;
+	padding: 1px 3px 1px 3px;
+}
+/* ----------------------------- */
+/* 		= bouton						*/
+/* ----------------------------- */
+
+.bouton {
+	display: inline-block;
+  width: 100px;
+  height: 24px;  
+  font-family: Arial, sans-serif;  
+  font-size: 1.2em;
+  line-height: 24px;
+  text-align: center; 
+  color: #444444;  
+    -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.25, var(--dark-bg-color)), color-stop(1, var(--light-bg-color)) );
+    background:-moz-linear-gradient( center top, var(--dark-bg-color) 25%, var(--light-bg-color) 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='var(--dark-bg-color)', endColorstr='var(--light-bg-color)');
+  background-color: var(--dark-bg-color);  
+	-webkit-border-top-left-radius:4px;
+	-moz-border-radius-topleft:4px;
+  border-top-left-radius:4px;
+    -webkit-border-top-right-radius:4px;
+    -moz-border-radius-topright:4px;
+    border-top-right-radius:4px;
+    -webkit-border-bottom-right-radius:4px;
+    -moz-border-radius-bottomright:4px;
+    border-bottom-right-radius:4px;
+    -webkit-border-bottom-left-radius:4px;
+    -moz-border-radius-bottomleft:4px;
+    border-bottom-left-radius:4px;
+   border:1px solid var(--light-bg-color);
+}
+.bouton:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, var(--light-bg-color)), color-stop(1, var(--dark-bg-color)) );
+	background:-moz-linear-gradient( center top, var(--light-bg-color) 5%, var(--dark-bg-color) 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='var(--light-bg-color)', endColorstr='var(--dark-bg-color)');
+	background-color:var(--light-bg-color);
+}
+.bouton:active {
+	position:relative;
+	top:1px;
+}
+
+/* boutons */
+button, .pointer{
+	cursor:  pointer;
+}
+
+.bouton_color{
+	color:white;
+	border-radius: 7px;
+	font-weight:bold;
+	padding:4px 15px 4px 15px;
+	cursor:  pointer;
+}
+.bouton_indian{
+	background-color:IndianRed;
+}
+.bouton_red{
+	background-color:Red;
+}
+.bouton_blue{
+	background-color:DodgerBlue;
+}
+.bouton_gris{
+	background-color:Gainsboro;
+}
+.bouton_vert{
+	background-color:Green;
+}
+.bouton_vert_clair{
+	background-color:MediumSeaGreen;
+}
+.bouton_darkgray{
+	background-color: #999;
+}
+.bouton_clair{
+	background-color: var(--light-bg-color);
+	color: black;
+}
+.bouton_info{
+	background-color: #00b4ab;
+}
+
+

@@ -1,0 +1,36 @@
+.lbl-toggle {						/* trigger (texte minimal)*/
+  display: block;
+  cursor: pointer;
+  transition: all 0.25s ease-out;
+}
+.lbl-toggle:hover {
+  color: #7C5A0B;
+}
+.lbl-toggle::before {			/* petite flèche */
+  content: ' ';
+  display: inline-block;
+
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  margin-right: .7rem;
+  margin-left: 4px;
+  transform: translateY(-2px);
+
+  transition: transform .2s ease-out;
+}
+
+.toggle:checked + .lbl-toggle::before {	/* animation de la flèche lors du toggle */
+  transform: rotate(90deg);
+}
+
+.collapsible-content {		/* contenu à supplémentaire ; caché par défaut */
+  max-height: 0px;
+  overflow: hidden;
+	transition: 1s ease-out;
+}
+
+.toggle:checked + .lbl-toggle + .collapsible-content {
+  max-height: none;			/* affichage du contenu supplémentaire lorsque le toggle est checked */
+}

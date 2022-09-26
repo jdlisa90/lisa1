@@ -1,0 +1,31 @@
+.article_content h2,.titre1, .titre2, .titre3, .titre4, .titre5, .titre6, .titre_article{
+	font-family: 'Kreon', serif;
+	font-weight: 300;
+}
+.titre_article{
+    font-size: 3em;
+}
+.titre1{
+	font-size: 2.7em;
+}
+.titre2{
+	font-size: 2.4em;
+}
+.titre3, .titre4, .titre5, .titre6{
+	font-size: 2em;
+}
+.titre_article strong{
+	font-weight: bold;
+}
+.titre_article em{
+	font-style: italic;
+}
+.titre1, .titre2, .titre3, .titre4, .titre5, .titre6{
+	margin-bottom: 6px;
+}
+.reference, .legende a{
+	font-size: inherit;
+}
+.reference:target { /* coloration des notes, en bas des article*/
+	background-color: #aaaaaa;
+}

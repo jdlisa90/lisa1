@@ -1,0 +1,76 @@
+#vscroll{
+	width: 130px;
+	height:450px;
+	position:relative;
+}
+#vscroll ul{
+	list-style:none;
+	margin:0;
+	padding:0;
+	height:2000px;
+}
+#vscroll ul li{
+	margin-bottom:0px;
+}
+#vscroll img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+#vscroll .showcase {
+  /* Set it so we could calculate the offsetLeft */
+  position: absolute;
+  left: 10px;
+  top: 5px;
+  height: 450px;
+  /*left: -25px;*/
+  /* Add scroll-bars */
+  overflow: hidden;
+  /*float:left;*/
+}
+#vscroll .top-arrow{
+	display:none;
+	left: 60px;
+	position: absolute;
+	z-index: 5;
+}
+#vscroll .top-arrow:hover{
+	z-index: 15;
+	transform: scale(1.7);
+}
+#vscroll .bottom-arrow{
+	/*display:block;*/
+	left: 60px;
+	bottom: 3px;
+	position: absolute;
+	z-index: 5;
+}
+#vscroll .bottom-arrow:hover{
+	z-index: 15;
+	transform: scale(1.7);
+}
+
+/*inutilisés*/
+.left-arrow{
+	display:block;
+	top: 40px;
+	position: relative;
+	/*margin-right:6px;*/
+	float:left;
+	z-index: 100;
+}
+
+.right-arrow{
+	display:block;
+	top: 40px;
+	left: -47px;
+	position: relative;
+	margin-left:0px;
+	float:left;
+}
+
+/* ne semblent pas utilisés */
+#nav a:focus { outline: none; }
+#nav img { border: none; display: block }
